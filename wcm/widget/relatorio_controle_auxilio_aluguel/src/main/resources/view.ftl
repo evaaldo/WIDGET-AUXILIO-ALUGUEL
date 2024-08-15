@@ -1,40 +1,75 @@
-<div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance()">
-    <script src="/webdesk/vcXMLRPC.js" type="text/javascript"></script>
-    <div class="alert alert-info" role="alert"><strong>Informação:</strong> Nessa tela você pode estar filtrando por status de contrato, como pendente e concluído, ou por data, como mês e ano. Além disso, você pode exportar nos formatos CSV, PDF e Excel.</div>
-    <div id="datatable-area" class="panel-heading fs-no-padding-left fs-no-padding-right">
-        <div class="row fs-no-margin">
-            <div id="datatable-area-action" class="fs-no-padding-left col-md-6">
-                <button class="button-success" role="button" style="color: #fff;"><i class="flaticon flaticon-file-date icon-xs" aria-hidden="true"></i> Relatório</button>
-                <button class="button-action" role="button" style="color: #fff;">CSV</button>
-                <button class="button-action" role="button" style="color: #fff;">PDF</button>
-                <button class="button-action" role="button" style="color: #fff;">Excel</button>
-                <div class="btn-group">
-                    <button type="button" class="button-action dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="color: #fff;">
-                        Status <span class="caret" style="color: #fff;"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a data-datatable-pendente="" href="#">Pendente</a></li>
-                        <li><a data-datatable-concluido="" href="#">Concluído</a></li>
-                    </ul>
-                </div>
+<div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance()">    
+    <div class="header">
+        <h1>Controle - Auxílio Aluguel</h1>
+        <div>
+            <button class="btn-export">Excel</button>
+            <button class="btn-export">CSV</button>
+            <button class="btn-export pdf">
+                <i class="fa-solid fa-file-pdf"></i>
+                Exportar PDF
+            </button>
+        </div>
+    </div>
+    <hr>
+    <div class="card-grouper">
+        <div class="ecard col-sm-4">
+            <i class="fa-solid fa-file-contract"></i>
+            <p>Total de Contratos</p>
+            <div>
+                <h1>1245</h1>
+                <span class="label label-success">Fluig</span>
             </div>
-            <div id="datatable-area-search" class="fs-no-padding-right col-md-5 col-md-offset-1">
-                <div class="form-group pull-right">
-                    <div class="input-group">
-                        <input class="form-control" id="fluig-data-table-input" type="text" placeholder="Buscar">
-                        <div class="input-group-addon" data-btn-search="" id="btnSearch">
-                            <span class="fluigicon fluigicon-search"></span>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="ecard col-sm-4">
+            <i class="fa-solid fa-clock"></i>
+            <p>Contratos Pendentes</p>
+            <div>
+                <h1>125</h1>
+                <span class="label label-success label-ecard">Fluig</span>
+            </div>
+        </div>
+        <div class="ecard col-sm-4">
+            <i class="fa-solid fa-circle-plus"></i>
+            <p>
+                Novos contratos 
+                <span class="label label-info">
+                    Agosto
+                </span>
+            </p>
+            <div>
+                <h1>8</h1>
+                <span class="label label-success">Fluig</span>
             </div>
         </div>
     </div>
-    <br>
-    <small>Exibindo 30 de 300 resultados</small>
-    <tbody>
-        <div id="target">
+    <div class="table">
+        <div class="table_header">
+            <div class="table_header_infos">
+                <div>
+                    <h3>Tabela de contratos</h3>
+                    <span class="label label-info">1245</span>
+                </div>
+                <p>Aqui você pode visualizar um relatório geral dos contratos.</p>
+            </div>
+            <div class="table_header_actions">
+                <button>Relatório</button>
+            </div>
         </div>
-    </tbody>
+        <div class="table-filter">
+            <div>
+                <input type="text"/>
+                <select></select>
+                <select></select>
+            </div>
+            <button>Limpar tudo</button>
+        </div>
+        <tbody>
+            <div id="target">
+            </div>
+        </tbody>
+    </div>
+    <#--  Scripts auxiliares  -->
+    <script src="https://kit.fontawesome.com/88cbac72fc.js" crossorigin="anonymous"></script>
+    <script src="/webdesk/vcXMLRPC.js" type="text/javascript"></script>
 </div>
 

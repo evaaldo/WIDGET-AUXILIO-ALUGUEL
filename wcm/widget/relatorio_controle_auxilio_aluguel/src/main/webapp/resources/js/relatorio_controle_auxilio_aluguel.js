@@ -8,6 +8,7 @@ var MyWidget = SuperWidget.extend({
         this.myTable = FLUIGC.datatable('#target', {
             dataRequest: DatasetFactory.getDataset('DSControleAuxilioAluguel', null, null, null).values.map(function (el) {
                 return {
+                    NUMERO_SOLICITACAO: el.NUMERO_SOLICITACAO,
                     CPF: el.CPF,
                     NOME_COLABORADOR: el.NOME_COLABORADOR,
                     VALORBENEFICIO: el.VALORBENEFICIO,
@@ -15,8 +16,9 @@ var MyWidget = SuperWidget.extend({
                     DATA_EMPRESTIMO: el.DATA_EMPRESTIMO
                 };
             }),
-            renderContent: ['CPF', 'NOME_COLABORADOR', 'VALORBENEFICIO', 'MES_AVISO', 'DATA_EMPRESTIMO'],
+            renderContent: ['NUMERO_SOLICITACAO', 'CPF', 'NOME_COLABORADOR', 'VALORBENEFICIO', 'MES_AVISO', 'DATA_EMPRESTIMO'],
             header: [
+                { 'title': 'NUMERO_SOLICITACAO' },
                 { 'title': 'CPF' },
                 { 'title': 'NOME_COLABORADOR' },
                 { 'title': 'VALORBENEFICIO' },

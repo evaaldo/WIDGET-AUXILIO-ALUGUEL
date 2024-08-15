@@ -1,96 +1,89 @@
-.cabecalho-acoes {
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+* {
+  font-family: "DM Serif Text", serif;
+  color: black;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 50px;
 }
 
-.pesquisar {
-    border-radius: 10px;
-    padding: .25em .5em;
-    border: 2px solid gray;
-    width: 20em;
+.header h1 {
+  font-weight: 800;
 }
 
-.button-success {
-  background-color: #13aa52;
-  border: 1px solid #13aa52;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  outline: none;
-  outline: 0;
-  padding: 10px 25px;
-  text-align: center;
-  transform: translateY(0);
-  transition: transform 150ms, box-shadow 150ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.header div {
+  display: flex;
+  gap: 1em;
 }
 
-.button-success:hover {
-  color: #fff;
-  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
-  transform: translateY(-2px);
-}
-.button-search {
-  background-color: #13aa52;
-  border: 1px solid #13aa52;
-  border-radius: 100px;
-  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  outline: none;
-  outline: 0;
-  /* padding: 10px 15px; */
-  text-align: center;
-  transform: translateY(0);
-  transition: transform 150ms, box-shadow 150ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.btn-export {
+  background-color: #5046E6;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  padding: .35em 1em;
+  transition: .35s;
 }
 
-.button-search:hover {
-  color: #fff;
-  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+.pdf {
+  background-color: red;
+}
+
+.btn-export:hover {
   transform: translateY(-2px);
 }
 
-.button-action {
-  background-color: #1EAAD9;
-  border: 1px solid #1EAAD9;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  outline: none;
-  outline: 0;
-  padding: 10px 25px;
-  text-align: center;
-  transform: translateY(0);
-  transition: transform 150ms, box-shadow 150ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+.card-grouper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
 }
 
-.button-button-action:hover {
-  color: #fff;
-  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+.ecard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 25px;
+  box-shadow: 0px 0px 32px -3px rgba(0,0,0,0.28);
+  padding: 2em;
+  transition: .35s;
+}
+
+.ecard:hover {
+  border: 1px solid rgb(74, 74, 218);
   transform: translateY(-2px);
 }
+
+.ecard i {
+  font-size: 3em;
+}
+
+.ecard p {
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+.ecard h1 {
+  font-size: 4em;
+  font-weight: 800;
+}
+
+.ecard div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-ecard {
+  font-size: 1em;
+}
+
+/* box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+box-shadow: 0 3px 5px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.06);
+transform: translateY(-2px); */
