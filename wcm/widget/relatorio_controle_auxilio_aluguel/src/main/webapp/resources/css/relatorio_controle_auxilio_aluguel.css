@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
-* {
-  font-family: "DM Serif Text", serif;
-  color: black;
+.controle-auxilio-aluguel {
+  font-family: "DM Serif Text", serif !important;
+  color: black !important;
 }
 
 .header {
@@ -17,20 +17,25 @@
 
 .header div {
   display: flex;
-  gap: 1em;
+  gap: .5em;
 }
 
 .btn-export {
-  background-color: #5046E6;
+  background-color: #157214;
   border: none;
-  border-radius: 15px;
-  color: white;
+  border-radius: 5px;
+  color: white !important;
   font-weight: 600;
   padding: .35em 1em;
   transition: .35s;
 }
 
+.btn-export i {
+  color: white !important;
+}
+
 .pdf {
+  margin-left: .5em;
   background-color: red;
 }
 
@@ -39,6 +44,7 @@
 }
 
 .card-grouper {
+  margin-top: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,9 +54,9 @@
 .ecard {
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 25px;
-  box-shadow: 0px 0px 32px -3px rgba(0,0,0,0.28);
+  box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.075);
   padding: 2em;
   transition: .35s;
 }
@@ -61,7 +67,13 @@
 }
 
 .ecard i {
+  display: flex;
+  justify-content: center;
   font-size: 3em;
+  width: 1em;
+  border-radius: 50%;
+  background-color: #c1bdfc;
+  color: #6359E9;
 }
 
 .ecard p {
@@ -82,6 +94,111 @@
 
 .label-ecard {
   font-size: 1em;
+}
+
+.table {
+  border: 1px solid #e9e9e9;
+  border-radius: 25px;
+  margin-top: 1em;
+}
+
+.table_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em 1em;
+}
+
+.table_header_infos div {
+  display: flex;
+}
+
+.button-generate {
+  background-color: #157214;
+  border: none;
+  border-radius: 5px;
+  color: white !important;
+  font-weight: 600;
+  padding: .35em 1em;
+  transition: .35s;
+}
+
+.button-generate:hover {
+  transform: translateY(-2px);
+}
+
+.button-generate i {
+  color: white !important;
+}
+
+.table_filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em 1em;
+  gap: .5em;
+}
+
+.table_filter div {
+  display: flex;
+  align-items: center;
+}
+
+.table_filter div div {
+  display: flex;
+  flex-direction: column;
+}
+
+.table_filter div input {
+  border-radius: 5px;
+  border: none;
+  background-color: #ece9e9;
+  color: black;
+  padding: .35em 1em;
+}
+
+.table_filter div select {
+  border-radius: 5px;
+  border: none;
+  background-color: #ece9e9;
+  padding: .35em 1em;
+}
+
+.table_filter div div input {
+  border-radius: 5px;
+  border: none;
+  background-color: #ece9e9;
+  color: black;
+  padding: .35em 1em;
+}
+
+.table_filter button {
+  background-color: #ff200b;
+  color: white !important;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: .35em 1em;
+  transition: .35s;
+}
+
+.table_filter button:hover {
+  transform: translateY(-2px);
+}
+
+.table_filter_date {
+  display: flex;
+  align-items: center;
+  padding: .5em 1em;
+  gap: .5em;
+}
+
+.table_filter_date input {
+  border-radius: 5px;
+  border: none;
+  background-color: #ece9e9;
+  color: black;
+  padding: .35em 1em;
 }
 
 /* box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
